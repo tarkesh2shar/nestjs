@@ -1,0 +1,62 @@
+
+POST http://localhost:3000/auth/signup
+Content-Type: application/json
+ 
+{
+    "email":"test123@test.com", 
+    "password":"password"
+}
+
+### Sign In
+ 
+POST http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+    "email":"test@test.com", 
+    "password":"password"
+}
+
+
+ 
+### Find a particular user with a given ID
+
+GET http://localhost:3000/auth/10
+
+
+### Find all user with a given email Address
+
+GET http://localhost:3000/auth?emaild=asdf@asdf.com
+
+
+### Remove user with a particular Id
+ 
+DELETE http://localhost:3000/auth/9
+
+
+### Update a User with a DTO 
+
+PATCH  http://localhost:3000/auth/10
+Content-Type: application/json
+
+{
+    "password":"abcdefghilklmnopqrstuvwxyz@abc.com"
+}
+
+
+### Set a session color
+
+GET http://localhost:3000/auth/colors/yellow
+
+
+### Get the color 
+
+GET http://localhost:3000/auth/colors
+
+
+###get current user
+GET http://localhost:3000/auth/whoami
+
+### SignOut Route here ok 
+
+POST http://localhost:3000/auth/signout
